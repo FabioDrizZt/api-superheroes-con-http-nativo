@@ -1,0 +1,112 @@
+[
+  {
+    "id": 0,
+    "nombre_real": "Bruce Wayne",
+    "nombre_superheroe": "Batman",
+    "poderes": [
+      "inteligencia",
+      "entrenamiento en artes marciales",
+      "tecnología avanzada"
+    ],
+    "grupo": "Liga de la Justicia"
+  },
+  {
+    "id": 1,
+    "nombre_real": "Clark Kent",
+    "nombre_superheroe": "Superman",
+    "poderes": [
+      "fuerza sobrehumana",
+      "velocidad",
+      "vuelo",
+      "visión de calor"
+    ],
+    "grupo": "Liga de la Justicia"
+  },
+  {
+    "id": 2,
+    "nombre_real": "Diana Prince",
+    "nombre_superheroe": "Wonder Woman",
+    "poderes": [
+      "fuerza sobrehumana",
+      "velocidad",
+      "vuelo",
+      "agilidad"
+    ],
+    "grupo": "Liga de la Justicia"
+  },
+  {
+    "id": 3,
+    "nombre_real": "Peter Parker",
+    "nombre_superheroe": "Spider-Man",
+    "poderes": [
+      "sentido arácnido",
+      "agilidad sobrehumana",
+      "lanzamiento de telarañas"
+    ],
+    "grupo": "Vengadores"
+  },
+  {
+    "id": 4,
+    "nombre_real": "Steve Rogers",
+    "nombre_superheroe": "Capitán América",
+    "poderes": [
+      "fuerza sobrehumana",
+      "agilidad",
+      "escudo indestructible"
+    ],
+    "grupo": "Vengadores"
+  },
+  {
+    "id": 5,
+    "nombre_real": "Bruce Banner",
+    "nombre_superheroe": "Hulk",
+    "poderes": [
+      "fuerza descomunal",
+      "regeneración celular"
+    ],
+    "grupo": "Vengadores"
+  },
+  {
+    "id": 6,
+    "nombre_real": "Carol Danvers",
+    "nombre_superheroe": "Capitana Marvel",
+    "poderes": [
+      "fuerza sobrehumana",
+      "vuelo",
+      "energía cósmica"
+    ],
+    "grupo": "Vengadores"
+  },
+  {
+    "id": 7,
+    "nombre_real": "Arthur Curry",
+    "nombre_superheroe": "Aquaman",
+    "poderes": [
+      "fuerza sobrehumana",
+      "habilidades acuáticas",
+      "comunicación con la vida marina"
+    ],
+    "grupo": "Liga de la Justicia"
+  },
+  {
+    "id": 8,
+    "nombre_real": "Barry Allen",
+    "nombre_superheroe": "Flash",
+    "poderes": [
+      "velocidad sobrehumana",
+      "viaje en el tiempo"
+    ],
+    "grupo": "Liga de la Justicia"
+  },
+  {
+    "id": 9,
+    "nombre_real": "Jean Grey",
+    "nombre_superheroe": "Fénix",
+    "poderes": [
+      "telepatía",
+      "telequinesis",
+      "fuerza cósmica"
+    ],
+    "grupo": "X-Men"
+  }
+]

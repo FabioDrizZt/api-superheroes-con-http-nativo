@@ -1,0 +1,112 @@
+# Archivo de pruebas para la API de Superhéroes con REST Client
+# Asegúrate de que el servidor Node.js (server.js) esté corriendo en localhost:3000
+# Para ejecutar una petición, haz clic en "Send Request" sobre ella.
+
+### 1. Obtener todos los superhéroes
+# Debería devolver el array completo del JSON.
+GET http://localhost:3000/superheroes/all
+Accept: application/json
+
+### -----------------------------------------
+
+### 2a. Obtener superhéroe por índice válido 
+GET http://localhost:3000/superheroes/id/0 
+Accept: application/json
+
+### -----------------------------------------
+
+### 2b. Obtener superhéroe por índice válido 
+GET http://localhost:3000/superheroes/id/4 
+Accept: application/json
+
+### -----------------------------------------
+
+### 2c. Obtener superhéroe por índice válido
+GET http://localhost:3000/superheroes/id/9 
+Accept: application/json
+
+### -----------------------------------------
+
+### 2d. Obtener superhéroe por índice inválido (fuera de rango)
+# Debería devolver un error 404 y un mensaje JSON.
+GET http://localhost:3000/superheroes/id/100 
+Accept: application/json
+
+### -----------------------------------------
+
+### 2e. Obtener superhéroe por índice inválido (negativo)
+# Debería devolver un error 404 y un mensaje JSON.
+GET http://localhost:3000/superheroes/id/-1 
+Accept: application/json
+
+### -----------------------------------------
+
+### 2f. Obtener superhéroe por índice inválido (no numérico)
+# Debería devolver un error 404 y un mensaje JSON (porque !isNaN(parseInt('abc')) es falso).
+GET http://localhost:3000/superheroes/id/abc 
+Accept: application/json
+
+### -----------------------------------------
+
+### 2g. Obtener superhéroe sin especificar índice
+# Debería devolver un error 400 y un mensaje JSON.
+GET http://localhost:3000/superheroes/id/ 
+Accept: application/json
+
+### -----------------------------------------
+
+### 3a. Buscar superhéroes por nombre (coincidencia parcial, múltiples: "man")
+# Debería devolver un array con Batman, Superman, Wonder Woman, Spider-Man, Aquaman.
+GET http://localhost:3000/superheroes/nombre/man 
+Accept: application/json
+
+### -----------------------------------------
+
+### 3b. Buscar superhéroes por nombre (coincidencia parcial, única: "Capitana")
+# Debería devolver un array con Capitana Marvel.
+GET http://localhost:3000/superheroes/nombre/Capitana 
+Accept: application/json
+
+### -----------------------------------------
+
+### 3c. Buscar superhéroes por nombre (insensible a mayúsculas: "flash")
+# Debería devolver un array con Flash.
+GET http://localhost:3000/superheroes/nombre/flash 
+Accept: application/json
+
+### -----------------------------------------
+
+### 3d. Buscar superhéroes por nombre (con espacio: "Wonder Woman")
+# Debería devolver un array con Wonder Woman. REST Client codifica la URL automáticamente.
+GET http://localhost:3000/superheroes/nombre/Wonder Woman
+Accept: application/json
+
+### -----------------------------------------
+
+### 3e. Buscar superhéroes por nombre (sin resultados: "Joker")
+# Debería devolver un array vacío [].
+GET http://localhost:3000/superheroes/nombre/Joker
+Accept: application/json
+
+### -----------------------------------------
+
+### 3f. Buscar superhéroes sin especificar nombre
+# Debería devolver un error 400 y un mensaje JSON.
+GET http://localhost:3000/superheroes/nombre/
+Accept: application/json
+
+### -----------------------------------------
+
+### 4. Probar una ruta inexistente (Error 404)
+# Debería devolver un error 404 y un mensaje JSON.
+GET http://localhost:3000/villanos
+Accept: application/json
+
+### -----------------------------------------
+
+### 5. Probar una ruta inexistente más compleja (Error 404)
+# Debería devolver un error 404 y un mensaje JSON.
+GET http://localhost:3000/superheroes/poderes/volar
+Accept: application/json
+
+### -----------------------------------------
